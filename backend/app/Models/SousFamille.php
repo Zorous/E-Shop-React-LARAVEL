@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class SousFamille extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'famille',
+        'active',
+        'photo'
+    ];
+
+    public $timestamps = false;
 }
