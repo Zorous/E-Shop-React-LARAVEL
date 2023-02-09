@@ -1,4 +1,5 @@
 # E-Shop-React-LARAVEL
+![laravel-plus-react-tw](https://user-images.githubusercontent.com/91610919/217950347-c9b2ef41-257e-444d-9659-9b0f4a743f96.png)
 
 <b>Using both React JS and Laravel can be a great option if you want to build a modern, feature-rich e-commerce website. React can be used to build the front-end user interface of your e-commerce website, while Laravel can be used to build the back-end server-side logic and manage the database.
 
