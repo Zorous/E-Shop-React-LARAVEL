@@ -3,7 +3,7 @@
 <p align="center">
 +
 </p>
-![redux](https://user-images.githubusercontent.com/91610919/218211140-cf91dc55-5de7-4494-88f2-4703aba14a0b.png)
+![redux](https://user-images.githubusercontent.com/91610919/218211754-8c9a12e3-3fbe-4c70-b8d7-d328cd909e78.png)
 
 <hr>
 <h3>Using both React JS and Laravel can be a great option if you want to build a modern, feature-rich e-commerce website. React can be used to build the front-end user interface of your e-commerce website, while Laravel can be used to build the back-end server-side logic and manage the database.
