@@ -8,9 +8,17 @@
 
 By combining the strengths of both technologies, you can build an e-commerce website that is fast, scalable, and highly interactive. With React, you can build dynamic and responsive UIs that can efficiently update in real-time, while with Laravel, you can build robust and secure back-end logic and manage complex database operations.
 </h3>
-<br><br>
+<br>
 <h3>
 However, it's important to note that using both React and Laravel requires a good understanding of both technologies, as well as experience in building web applications. Additionally, integrating the two technologies can be challenging and requires a good understanding of how to connect the front-end and back-end of an application.
 
 In conclusion, using both React and Laravel can be a great choice for building a modern e-commerce website, but it requires a good understanding of both technologies and the ability to integrate them effectively.
 </h3>
+<br>
+<p>
+In other words, you have two apps, the one with laravel that exposes an api which could be used by any other service in the infrastructure, and the reactjs app which is a nodejs app that consumes that api, and handles the magic of react + redux.
+
+The way your site is actually accessed from the outside world is thru the express/nodejs app, which calls the laravel api for data persistence and other business logic.
+
+The laravel app handles sessions, oauth, the database, file access to the hardrive and so on, while the nodejs app handles the actual website routing, the templates, the css and javascript part.
+</p>
