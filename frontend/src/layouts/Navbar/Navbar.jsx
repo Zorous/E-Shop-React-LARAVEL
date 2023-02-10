@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link, Outlet} from "react-router-dom";
-import Banner from '../banner/Banner';
 
 function Navbar() {
   return (
@@ -12,11 +11,11 @@ function Navbar() {
                   <div className="col-sm-12">
                      <div className="custom_menu">
                         <ul>
-                           <li><a href="www.google.com">Best Sellers</a></li>
-                           <li><a href="www.google.com">Promo</a></li>
-                           <li><a href="www.google.com">Nouveautés</a></li>
-                           <li><a href="www.google.com">Today's Deals</a></li>
-                           <li><a href="www.google.com">Customer Service</a></li>
+                        <li><Link to="/">Meilleures ventes</Link></li>
+                        <li><Link to="/">Promo</Link></li>
+                           <li><Link to="/articles">Articles</Link></li>
+                           <li><Link to="/">Nouveautés</Link></li>
+                           <li><Link to="/">Contacter un Magazin</Link></li>
                         </ul>
                      </div>
                   </div>

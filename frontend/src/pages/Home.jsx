@@ -1,9 +1,12 @@
 import React from 'react'
+import Familles from '../components/familles/Familles'
 
 function Home() {
-<div className='container'>
-<h1>Welcome!</h1>
-</div>
+  return (
+    <>
+    <Familles />
+    </>
+  )
 }
 
 export default Home
