@@ -13,7 +13,7 @@ function Navbar() {
                      <div className="custom_menu">
                         <ul>
                            <li><a href="www.google.com">Best Sellers</a></li>
-                           <li><a href="www.google.com"></a></li>
+                           <li><a href="www.google.com">Promo</a></li>
                            <li><a href="www.google.com">Nouveautés</a></li>
                            <li><a href="www.google.com">Today's Deals</a></li>
                            <li><a href="www.google.com">Customer Service</a></li>
@@ -82,7 +82,7 @@ function Navbar() {
                            </li>
                            <li><a href="www.google.com">
                               <i className="fa fa-user" aria-hidden="true"></i>
-                              <span className="padding_10">Cart</span></a>
+                              <span className="padding_10">login</span></a>
                            </li>
                         </ul>
                      </div>
