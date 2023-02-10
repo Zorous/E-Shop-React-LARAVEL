@@ -1,7 +1,7 @@
 # E-Shop-React-LARAVEL
 ![laravel-plus-react-tw](https://user-images.githubusercontent.com/91610919/217950347-c9b2ef41-257e-444d-9659-9b0f4a743f96.png)
 <p align="center">
-+
+<h1>+</h1>
 </p>
 <img src="https://user-images.githubusercontent.com/91610919/218211754-8c9a12e3-3fbe-4c70-b8d7-d328cd909e78.png" alt="redux"/>
 
