@@ -1,20 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import Navbar from '../layouts/Navbar/Navbar';
 import axios from "axios"
 
+
+const baseURL = "http://127.0.0.1:8000/api/articles";
+
+
 function Home() {
-    const [Articles,setArticles] = useState();
-    const data = axios.get('http://127.0.0.1:8000/api/articles');
-    useEffect(()=>{
-        setArticles(data)
-        console.log(Articles);
-    },[data])
-  return (
-
-<Navbar />
-
-
-  )
+<div className='container'>
+<h1>Welcome!</h1>
+</div>
 }
 
 export default Home
