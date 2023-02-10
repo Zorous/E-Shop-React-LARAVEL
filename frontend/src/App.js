@@ -7,8 +7,8 @@ import Layout from './layouts/Layout';
 function App() {
   return (
     <Routes>
-      <Route  element={<Layout/>} >
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Layout/>} >
+      <Route index element={<Home />} />
       <Route path="/articles" element={<Article />} />
       </Route> 
   </Routes>

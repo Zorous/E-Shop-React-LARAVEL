@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
-
+import { Link } from 'react-router-dom';
 
 const baseURL = "http://127.0.0.1:8000/api/articles";
 
@@ -20,13 +20,15 @@ useEffect(() => {
 <div className='row'>
 {
   Articles?
-  Articles.map((i)=>( <div className='col col-md-4'>
-  <div className="card" style={{width: "18rem"}}>
+  Articles.map((i)=>( 
+<div className='col col-md-4'>
+ <Link to={`/articles/${i.id}`}> <div className="card mb-3" style={{width: "18rem"}}>
   <img className="card-img-top" src={i.photo} alt="Card png" />
   <div className="card-body">
-    <p className="card-text">{i.designation}</p>
+  <h4 class="card-title">{i.designation}</h4>
   </div>
 </div>
+</Link>
   </div>))
 :<div>ERROR</div>
 }
