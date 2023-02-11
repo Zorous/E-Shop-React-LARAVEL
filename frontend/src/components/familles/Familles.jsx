@@ -1,41 +1,69 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getFamille } from "../../Redux/Slices/FamillesSlice";
+import { getSousfamille } from "../../Redux/Slices/SousFamille";
 
 function Familles() {
   const dispatch = useDispatch();
-  const { loading, error } = useSelector((state) => state.familles);
+
+
+/*---------Famille-------*/
+  const { loading_famille, error_famille } = useSelector((state) => state.familles);
   const familles = useSelector((state) => state.familles);
-
   const [famillesS,setFamillesS] = useState([]);
-
 
   useEffect(() => {
     dispatch(getFamille());
     setFamillesS(familles.familles)
   }, [dispatch]);
   console.log(familles);
+
+
+
+/*---------Sous-Famille-------*/
+
+  const { loading, error } = useSelector((state) => state.sousfamilles);
+  const sousfamilles = useSelector((state) => state.sousfamilles);
+  const [sousfamillesS,setsousFamillesS] = useState([]);
+
+  useEffect(() => {
+    dispatch(getSousfamille());
+    setsousFamillesS(sousfamilles.sousfamilles)
+  }, [dispatch]);
+  console.log(familles);
+
+
   return (
     <div>
       {error ? (
         <div class="alert alert-danger" role="alert">
-          {error}
+          {error_famille}
         </div>
       ) : (
         ""
       )}
 
-      <div className="fashion_section">
+      <div className="fashion_section mt-5">
         <div id="main_slider" className="carousel slide" data-ride="carousel">
           <div className="carousel-inner">
             <div className="carousel-item active">
-            {loading ? (
+            {loading_famille ? (
                       <h1>Loading... </h1>
                     ) : (
             <div>
             {famillesS && famillesS.map((famille)=>(
             <div className="container">
-                <h1 className="fashion_taital">{famille.famille}</h1>
+               <div 
+               style=
+               {{background:`url('https://sunrisemarketplace.com/wp-content/uploads/2017/09/SMP-grocery-stores-banner.jpg')`,
+               backgroundPosition:"center",
+                 width:"100%",
+                 height:"100px",
+                 filter: "blur(2px)"
+            }}>
+               <h1 className="fashion_taital text-white">{famille.famille}</h1>
+               </div>
+
                 <div className="fashion_section_2">
                   <div className="row">
                     <div className="col-lg-4 col-sm-4">

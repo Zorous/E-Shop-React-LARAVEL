@@ -15,5 +15,6 @@ class Famille extends Model
         'photo'
     ];
 
+
     public $timestamps = false;
 }

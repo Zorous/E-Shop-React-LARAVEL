@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\FamilleController;
-
+use App\Http\Controllers\SousFamilleController;
 
 /*
 |
@@ -17,6 +17,7 @@ use App\Http\Controllers\FamilleController;
 
 Route::get("/articles",[ArticleController::class,"index"]);
 Route::get("/familles",[FamilleController::class,"index"]);
+Route::get("/sousfamilles",[SousFamilleController::class,"index"]);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

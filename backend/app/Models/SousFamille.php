@@ -9,10 +9,16 @@ class SousFamille extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'famille',
+        'sous_famille',
         'active',
-        'photo'
+        'photo',
+        'famille_id'
     ];
+
+    public function famille(){
+        return $this->belongsTo(Famille::class,"famille_id","id");
+    }
+
 
     public $timestamps = false;
 }
