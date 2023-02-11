@@ -99,8 +99,8 @@ function Familles() {
                     )}
         
             </div>
+            
           </div>
-
           <a
             className="carousel-control-prev"
             href="#electronic_main_slider"
