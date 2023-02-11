@@ -4,13 +4,12 @@ import axios from "axios";
 
 export const getFamille = createAsyncThunk("famille/getFamille", async(_,thunkAPI)=>{
     try{
-    const response = await axios.get("http://127.0.0.1:8000/api/familles");
-    return response.data;
+        const res = await fetch('http://127.0.0.1:8000/api/familles')
+        const data = await res.json()
+        return data
 }
 catch(error){console.log(error)}
 })
-
-
 
 
 //Adding a new Famille
@@ -36,16 +35,6 @@ catch(error){console.log(error)}
 // })
 
 
-
-
-
-
-
-
-
-
-
-
 export const FamilleSlice = createSlice({
     name : "familles",
     initialState:{
@@ -59,12 +48,15 @@ export const FamilleSlice = createSlice({
         UpdateFamille : () =>{},
     },
     "extraReducers":{
-        [getFamille.fulfilled]: (state, { meta, payload })=> {  
-            state.familes = payload;
-           },
-          [getFamille.pending]: (state, { meta })=>{
+         [getFamille.pending]: (state, { meta })=>{
             state.loading = "pending";
-          },
+          }, 
+         [getFamille.fulfilled]: (state, action)=> {  
+            // state.familles = action.payload;
+            state.loading = false
+            state.familles  = action.payload
+            console.log(action)
+           },
           [getFamille.rejected]: (state,{meta,payload,error })=>{
             state.error = error;
           }
