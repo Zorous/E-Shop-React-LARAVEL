@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('sous_familles', function (Blueprint $table) {
             $table->id();
-            $table->string("sous_famille", 100);
+            $table->string("sous_famille", 255);
             $table->tinyInteger("active");
             $table->string("photo",100);
             $table->foreignId('famille_id')->references('id')->on('familles');

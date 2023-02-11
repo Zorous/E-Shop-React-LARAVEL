@@ -13,7 +13,7 @@ return new class extends Migration
             $table->id();
             $table->string("famille", 100);
             $table->tinyInteger("active");
-            $table->string("photo",100);
+            $table->string("photo_famille",255);
             $table->timestamps();
         });
     }

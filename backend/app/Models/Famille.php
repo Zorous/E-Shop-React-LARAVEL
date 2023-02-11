@@ -12,7 +12,7 @@ class Famille extends Model
     protected $fillable = [
         'famille',
         'active',
-        'photo'
+        'photo_famille'
     ];
 
 

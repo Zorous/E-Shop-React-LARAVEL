@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
-            $table->string("photo",100);
+            $table->string("photo",255);
             $table->string("designation", 100);
             $table->float("prixht");
             $table->float("tva");

@@ -28,16 +28,16 @@ function Familles() {
 
   useEffect(() => {
     dispatch(getSousfamille());
-    setsousFamillesS(sousfamilles.sousfamilles)
+    setsousFamillesS(sousfamilles.Sousfamilles)
   }, [dispatch]);
-  console.log(familles);
+  console.log(sousfamilles);
 
 
   return (
     <div>
       {error ? (
         <div class="alert alert-danger" role="alert">
-          {error_famille}
+          {error}
         </div>
       ) : (
         ""
@@ -47,7 +47,7 @@ function Familles() {
         <div id="main_slider" className="carousel slide" data-ride="carousel">
           <div className="carousel-inner">
             <div className="carousel-item active">
-            {loading_famille ? (
+            {loading ? (
                       <h1>Loading... </h1>
                     ) : (
             <div>
@@ -55,7 +55,7 @@ function Familles() {
             <div className="container">
                <div 
                style=
-               {{background:`url('https://sunrisemarketplace.com/wp-content/uploads/2017/09/SMP-grocery-stores-banner.jpg')`,
+               {{background:`url(${famille.photo_famille})`,
                backgroundPosition:"center",
                  width:"100%",
                  height:"100px",
@@ -66,14 +66,15 @@ function Familles() {
 
                 <div className="fashion_section_2">
                   <div className="row">
-                    <div className="col-lg-4 col-sm-4">
+{sousfamillesS && sousfamillesS.filter((sf)=>(sf.famille === famille.famille)).map((Sfamille)=>(
+              <div className="col-lg-4 col-sm-4">
                       <div className="box_main">
-                        <h4 className="shirt_text">Man T -shirt</h4>
+                        <h4 className="shirt_text">{Sfamille.sous_famille}</h4>
                         <p className="price_text">
-                          Price <span style={{ color: " #262626" }}>$ 30</span>
+                          Price <span style={{ color: " #262626" }}> 30</span>
                         </p>
                         <div className="tshirt_img">
-                          <img alt="png" src={famille.photo} />
+                          <img alt={`${Sfamille.photo}`} src={`${Sfamille.photo}`} />
                         </div>
                         <div className="btn_main">
                           <div className="buy_bt">
@@ -85,50 +86,10 @@ function Familles() {
                         </div>
                       </div>
                     </div>
-                    <div className="col-lg-4 col-sm-4">
-                      <div className="box_main">
-                        <h4 className="shirt_text">Man -shirt</h4>
-                        <p className="price_text">
-                          Price <span style={{ color: " #262626" }}>$ 30</span>
-                        </p>
-                        <div className="tshirt_img">
-                          <img
-                            alt="png"
-                            src="/assets/images/dress-shirt-img.png"
-                          />
-                        </div>
-                        <div className="btn_main">
-                          <div className="buy_bt">
-                            <a href="www.google.com">Buy Now</a>
-                          </div>
-                          <div className="seemore_bt">
-                            <a href="www.google.com">See More</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-4 col-sm-4">
-                      <div className="box_main">
-                        <h4 className="shirt_text">Woman Scart</h4>
-                        <p className="price_text">
-                          Price <span style={{ color: " #262626" }}>$ 30</span>
-                        </p>
-                        <div className="tshirt_img">
-                          <img
-                            alt="png"
-                            src="/assets/images/women-clothes-img.png"
-                          />
-                        </div>
-                        <div className="btn_main">
-                          <div className="buy_bt">
-                            <a href="www.google.com">Buy Now</a>
-                          </div>
-                          <div className="seemore_bt">
-                            <a href="www.google.com">See More</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+))
+
+}
+        
                   </div>
                 </div>
             </div>  

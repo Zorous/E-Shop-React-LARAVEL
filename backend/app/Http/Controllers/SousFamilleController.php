@@ -4,13 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\SousFamille;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SousFamilleController extends Controller
 {
 
     public function index()
     {
-        $subFamille = SousFamille::all();
+        // $subFamille = SousFamille::all();
+        $subFamille = DB::select("SELECT * FROM sous_familles,familles WHERE famille_id=familles.id");
+
+        // $test = $subFamille[0]->famille;
         return response()->json($subFamille);
     }
 
