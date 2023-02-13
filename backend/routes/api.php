@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,11 @@ use App\Http\Controllers\SousFamilleController;
 Route::get("/articles",[ArticleController::class,"index"]);
 Route::get("/familles",[FamilleController::class,"index"]);
 Route::get("/sousfamilles",[SousFamilleController::class,"index"]);
+
+
+Route::post('/post',[PostController::class,"store"]);
+
+
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
