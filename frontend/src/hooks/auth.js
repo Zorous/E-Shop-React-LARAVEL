@@ -1,5 +1,7 @@
 
-import axios from 'lib/axios'
+import axios from '../api/axios';
+
+
 import { useNavigate, useParams } from 'react-router-dom';
 
 export const useAuth = () => {
@@ -13,7 +15,7 @@ export const useAuth = () => {
             .post('/login',)
             .then(() => {
                   setSuccessResponse();
-                  navigate('/dashboard');
+                  navigate('/');
               });
     
     }
